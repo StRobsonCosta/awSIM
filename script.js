@@ -122,7 +122,113 @@ let questions = [
   correct: [3],
   explanation: "Spot Instances oferecem grande economia.",
   extra: "Devem ser usadas apenas quando há tolerância à interrupção."
+},
+{
+  text: "Uma aplicação precisa garantir baixa latência global para usuários distribuídos. Qual solução é mais adequada?",
+  options: ["ALB em uma região", "CloudFront", "Route 53 com weighted routing", "Auto Scaling apenas"],
+  correct: [1],
+  explanation: "CloudFront distribui conteúdo por edge locations próximas aos usuários.",
+  extra: "É a principal solução da AWS para performance global."
+},
+{
+  text: "Qual serviço permite comunicação entre múltiplas VPCs de forma centralizada?",
+  options: ["VPC Peering", "Transit Gateway", "Direct Connect", "NAT Gateway"],
+  correct: [1],
+  explanation: "Transit Gateway centraliza a conectividade entre VPCs e on-premises.",
+  extra: "Muito usado em ambientes corporativos complexos."
+},
+{
+  text: "Qual estratégia de backup permite recuperação ponto-a-ponto em bancos RDS?",
+  options: ["Snapshots manuais", "Backups automáticos", "Read Replicas", "Multi-AZ"],
+  correct: [1],
+  explanation: "Backups automáticos permitem Point-in-Time Recovery.",
+  extra: "Essencial para requisitos de RPO rigorosos."
+},
+{
+  text: "Qual recurso do Route 53 permite failover automático entre regiões?",
+  options: ["Weighted routing", "Latency routing", "Failover routing", "Geolocation routing"],
+  correct: [2],
+  explanation: "Failover routing usa health checks para alternar endpoints.",
+  extra: "Combinado com health checks, garante alta disponibilidade."
+},
+{
+  text: "Qual serviço é indicado para ingestão de dados em tempo real (streaming)?",
+  options: ["SQS", "SNS", "Kinesis Data Streams", "Step Functions"],
+  correct: [2],
+  explanation: "Kinesis é projetado para streaming em tempo real.",
+  extra: "Muito usado para logs, métricas e eventos."
+},
+{
+  text: "Qual tipo de load balancer suporta tráfego TCP de alta performance?",
+  options: ["ALB", "Classic ELB", "NLB", "CloudFront"],
+  correct: [2],
+  explanation: "Network Load Balancer opera na camada 4.",
+  extra: "Ideal para baixa latência e alto throughput."
+},
+{
+  text: "Qual serviço permite executar consultas SQL diretamente em dados no S3?",
+  options: ["Redshift", "Athena", "Glue", "EMR"],
+  correct: [1],
+  explanation: "Athena permite consultas SQL serverless no S3.",
+  extra: "Muito cobrado quando o requisito é simplicidade e custo baixo."
+},
+{
+  text: "Qual recurso protege dados em trânsito entre serviços AWS?",
+  options: ["IAM", "TLS/HTTPS", "KMS", "SSE-S3"],
+  correct: [1],
+  explanation: "TLS/HTTPS criptografa dados em trânsito.",
+  extra: "Boa prática mesmo dentro da VPC."
+},
+{
+  text: "Qual serviço é indicado para execução de aplicações Kubernetes gerenciadas?",
+  options: ["ECS", "EKS", "Fargate", "EC2 apenas"],
+  correct: [1],
+  explanation: "EKS fornece Kubernetes gerenciado pela AWS.",
+  extra: "Cai bastante em cenários de containers."
+},
+{
+  text: "Qual recurso ajuda a detectar recursos AWS expostos publicamente?",
+  options: ["AWS Config", "IAM Access Analyzer", "CloudTrail", "Inspector"],
+  correct: [1],
+  explanation: "IAM Access Analyzer identifica acessos públicos ou externos.",
+  extra: "Importante para segurança e compliance."
+},
+{
+  text: "Qual serviço fornece armazenamento de arquivos compartilhado e escalável?",
+  options: ["EBS", "EFS", "S3", "FSx for Lustre"],
+  correct: [1],
+  explanation: "EFS é um sistema de arquivos NFS gerenciado.",
+  extra: "Muito usado com EC2 e containers."
+},
+{
+  text: "Qual prática reduz o impacto de falhas em microserviços?",
+  options: ["Deploy monolítico", "Circuit Breaker", "Aumentar timeout", "Single AZ"],
+  correct: [1],
+  explanation: "Circuit Breaker evita falhas em cascata.",
+  extra: "Arquitetura resiliente é muito cobrada."
+},
+{
+  text: "Qual serviço permite centralizar logs de aplicações e infraestrutura?",
+  options: ["CloudTrail", "CloudWatch Logs", "Config", "S3 Glacier"],
+  correct: [1],
+  explanation: "CloudWatch Logs centraliza logs.",
+  extra: "Pode ser integrado com alarmes e métricas."
+},
+{
+  text: "Qual opção é mais econômica para dados raramente acessados, mas que precisam ser recuperados rapidamente?",
+  options: ["S3 Standard", "S3 One Zone-IA", "S3 Glacier", "S3 Glacier Deep Archive"],
+  correct: [1],
+  explanation: "One Zone-IA é mais barato e permite acesso rápido.",
+  extra: "Avaliar durabilidade e SLA antes de usar."
+},
+{
+  text: "Qual serviço ajuda a automatizar respostas a eventos AWS?",
+  options: ["Lambda", "EventBridge", "SNS", "CloudWatch Alarms"],
+  correct: [1],
+  explanation: "EventBridge roteia eventos e aciona serviços.",
+  extra: "Base de arquiteturas orientadas a eventos."
 }
+
 
 ];
 
