@@ -227,7 +227,113 @@ let questions = [
   correct: [1],
   explanation: "EventBridge roteia eventos e aciona serviços.",
   extra: "Base de arquiteturas orientadas a eventos."
-}
+},
+{
+  text: "Uma aplicação precisa armazenar sessões de usuário com latência de microssegundos. Qual serviço é mais indicado?",
+  options: ["RDS", "ElastiCache", "DynamoDB", "S3"],
+  correct: [1],
+  explanation: "ElastiCache fornece armazenamento em memória de baixa latência.",
+  extra: "Redis é o engine mais usado para sessões e cache."
+},
+{
+  text: "Qual recurso permite controlar permissões temporárias para aplicações?",
+  options: ["IAM User", "IAM Role", "IAM Group", "Access Key"],
+  correct: [1],
+  explanation: "IAM Roles fornecem credenciais temporárias.",
+  extra: "Essencial para EC2, Lambda e ECS."
+},
+{
+  text: "Qual serviço garante auditoria de chamadas à API AWS?",
+  options: ["CloudWatch", "CloudTrail", "Config", "Inspector"],
+  correct: [1],
+  explanation: "CloudTrail registra chamadas de API.",
+  extra: "Muito cobrado em segurança e compliance."
+},
+{
+  text: "Qual serviço AWS é indicado para processamento batch em larga escala?",
+  options: ["Lambda", "Batch", "Step Functions", "SQS"],
+  correct: [1],
+  explanation: "AWS Batch gerencia jobs batch.",
+  extra: "Usa EC2 e Spot Instances para otimização de custo."
+},
+{
+  text: "Qual opção melhora disponibilidade de aplicações EC2 sem alterar código?",
+  options: ["Aumentar tamanho da instância", "Multi-AZ com ALB", "Adicionar cache", "Usar Spot"],
+  correct: [1],
+  explanation: "Multi-AZ com ALB distribui tráfego.",
+  extra: "Arquitetura clássica cobrada na prova."
+},
+{
+  text: "Qual serviço permite detectar vulnerabilidades em instâncias EC2?",
+  options: ["GuardDuty", "Inspector", "Shield", "Macie"],
+  correct: [1],
+  explanation: "Inspector analisa vulnerabilidades e exposição.",
+  extra: "Muito cobrado em segurança."
+},
+{
+  text: "Qual tipo de armazenamento EBS é indicado para workloads de alta IOPS?",
+  options: ["gp2", "gp3", "io1/io2", "st1"],
+  correct: [2],
+  explanation: "io1/io2 são volumes provisionados para alta performance.",
+  extra: "Comuns em bancos de dados críticos."
+},
+{
+  text: "Qual serviço facilita a migração de bancos on-premises para AWS com mínimo downtime?",
+  options: ["Snowball", "DMS", "DataSync", "Storage Gateway"],
+  correct: [1],
+  explanation: "DMS permite replicação contínua.",
+  extra: "Muito cobrado em cenários de migração."
+},
+{
+  text: "Qual prática aumenta resiliência contra falhas de zona?",
+  options: ["Single AZ", "Multi-AZ", "On-Demand apenas", "Snapshots"],
+  correct: [1],
+  explanation: "Multi-AZ distribui recursos entre zonas.",
+  extra: "Base de alta disponibilidade."
+},
+{
+  text: "Qual serviço AWS fornece detecção de atividades maliciosas?",
+  options: ["GuardDuty", "WAF", "Inspector", "Shield"],
+  correct: [0],
+  explanation: "GuardDuty analisa logs e detecta ameaças.",
+  extra: "Integra CloudTrail, VPC Flow Logs e DNS logs."
+},
+{
+  text: "Qual recurso do Auto Scaling ajusta capacidade automaticamente?",
+  options: ["Launch Template", "Scaling Policy", "AMI", "Elastic IP"],
+  correct: [1],
+  explanation: "Scaling Policies definem regras de escala.",
+  extra: "Target tracking é o mais comum."
+},
+{
+  text: "Qual serviço é indicado para filas com garantia de processamento único?",
+  options: ["SNS", "SQS Standard", "SQS FIFO", "EventBridge"],
+  correct: [2],
+  explanation: "SQS FIFO garante ordem e processamento único.",
+  extra: "Muito cobrado quando há consistência."
+},
+{
+  text: "Qual opção permite versionamento de objetos no S3?",
+  options: ["Lifecycle Policy", "Versioning", "Replication", "Encryption"],
+  correct: [1],
+  explanation: "Versioning mantém múltiplas versões de objetos.",
+  extra: "Protege contra deleção acidental."
+},
+{
+  text: "Qual serviço fornece dashboards para métricas AWS?",
+  options: ["CloudTrail", "CloudWatch", "Config", "X-Ray"],
+  correct: [1],
+  explanation: "CloudWatch exibe métricas e dashboards.",
+  extra: "Base para observabilidade."
+},
+{
+  text: "Qual estratégia reduz impacto financeiro de instâncias Spot interrompidas?",
+  options: ["Single Instance", "Auto Scaling com múltiplos tipos", "Reserved Instances", "On-Demand apenas"],
+  correct: [1],
+  explanation: "Diversificar tipos reduz interrupções.",
+  extra: "Spot é cobrado junto com resiliência."
+},
+
 
 
 ];
