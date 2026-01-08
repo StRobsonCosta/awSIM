@@ -17,7 +17,113 @@ let questions = [
 {text:"Qual serviço fornece filas desacopladas e altamente escaláveis?",options:["SNS","SQS","Kinesis","Step Functions"],correct:[1],explanation:"SQS desacopla produtores e consumidores.",extra:"Essencial para arquiteturas resilientes."},
 {text:"Qual banco NoSQL totalmente gerenciado oferece escalabilidade automática?",options:["RDS","Aurora","DynamoDB","Redshift"],correct:[2],explanation:"DynamoDB escala automaticamente.",extra:"Usado para workloads de baixa latência."},
 {text:"Qual serviço armazena objetos com durabilidade de 11 noves?",options:["EBS","EFS","S3","FSx"],correct:[2],explanation:"S3 tem durabilidade extremamente alta.",extra:"Muito utilizado para backup e dados estáticos."},
-{text:"Qual serviço monitora métricas e cria alarmes?",options:["CloudTrail","CloudWatch","Config","Inspector"],correct:[1],explanation:"CloudWatch monitora métricas e logs.",extra:"Essencial para observabilidade."}
+{text:"Qual serviço monitora métricas e cria alarmes?",options:["CloudTrail","CloudWatch","Config","Inspector"],correct:[1],explanation:"CloudWatch monitora métricas e logs.",extra:"Essencial para observabilidade."},
+{
+  text: "Uma aplicação precisa enviar notificações para milhares de usuários simultaneamente. Qual serviço é mais adequado?",
+  options: ["SQS", "SNS", "SES", "EventBridge"],
+  correct: [1],
+  explanation: "SNS é um serviço de pub/sub projetado para enviar mensagens para múltiplos assinantes simultaneamente.",
+  extra: "SNS é muito usado para fan-out, integrando com SQS, Lambda, SMS e e-mail."
+},
+{
+  text: "Qual recurso permite comunicação privada entre uma VPC e serviços AWS sem usar a internet?",
+  options: ["NAT Gateway", "Internet Gateway", "VPC Endpoint", "Elastic IP"],
+  correct: [2],
+  explanation: "VPC Endpoints permitem acesso privado a serviços AWS.",
+  extra: "Muito cobrado quando o requisito é segurança e tráfego privado."
+},
+{
+  text: "Qual serviço AWS permite orquestrar workflows serverless com estados e retries?",
+  options: ["Lambda", "Step Functions", "SQS", "EventBridge"],
+  correct: [1],
+  explanation: "Step Functions orquestra fluxos complexos entre serviços.",
+  extra: "Excelente para processos longos e tolerantes a falhas."
+},
+{
+  text: "Qual estratégia reduz downtime durante deploys em produção?",
+  options: ["Deploy direto", "Blue/Green Deployment", "Parar aplicação", "Aumentar TTL do DNS"],
+  correct: [1],
+  explanation: "Blue/Green permite alternar versões sem impacto ao usuário.",
+  extra: "Canary deployment é uma variação muito cobrada na prova."
+},
+{
+  text: "Qual serviço fornece balanceamento de carga na camada 7?",
+  options: ["NLB", "ALB", "Route 53", "CloudFront"],
+  correct: [1],
+  explanation: "ALB opera na camada 7 (HTTP/HTTPS).",
+  extra: "Ideal para aplicações web e microserviços."
+},
+{
+  text: "Qual banco de dados AWS é mais indicado para workloads analíticos (OLAP)?",
+  options: ["RDS MySQL", "DynamoDB", "Redshift", "Aurora"],
+  correct: [2],
+  explanation: "Redshift é otimizado para consultas analíticas em grandes volumes.",
+  extra: "Muito usado em BI e Data Warehousing."
+},
+{
+  text: "Qual serviço permite proteger APIs contra ataques como SQL Injection?",
+  options: ["AWS Shield", "AWS WAF", "IAM", "KMS"],
+  correct: [1],
+  explanation: "AWS WAF filtra requisições HTTP maliciosas.",
+  extra: "Frequentemente usado junto com CloudFront ou ALB."
+},
+{
+  text: "Qual opção fornece criptografia em repouso automaticamente no S3?",
+  options: ["SSE-S3", "HTTPS", "VPC Endpoint", "IAM Role"],
+  correct: [0],
+  explanation: "SSE-S3 usa chaves gerenciadas pela AWS.",
+  extra: "SSE-KMS é usado quando há necessidade de controle de chaves."
+},
+{
+  text: "Qual serviço registra mudanças de configuração dos recursos AWS?",
+  options: ["CloudWatch", "CloudTrail", "AWS Config", "Inspector"],
+  correct: [2],
+  explanation: "AWS Config rastreia mudanças de configuração.",
+  extra: "Muito usado para compliance e auditoria."
+},
+{
+  text: "Qual recurso do RDS melhora escalabilidade de leitura?",
+  options: ["Multi-AZ", "Read Replica", "Snapshot", "Parameter Group"],
+  correct: [1],
+  explanation: "Read Replicas distribuem carga de leitura.",
+  extra: "Multi-AZ é para alta disponibilidade, não performance."
+},
+{
+  text: "Qual serviço permite executar código sem provisionar servidores?",
+  options: ["EC2", "ECS", "Lambda", "Lightsail"],
+  correct: [2],
+  explanation: "Lambda é serverless e executa código sob demanda.",
+  extra: "Muito cobrado quando o foco é reduzir custo operacional."
+},
+{
+  text: "Qual serviço AWS é indicado para migração de grandes volumes de dados offline?",
+  options: ["DataSync", "Snowball", "S3 Transfer Acceleration", "FTP"],
+  correct: [1],
+  explanation: "Snowball é usado para migrações físicas de dados.",
+  extra: "Ideal quando a internet é limitada ou o volume é muito grande."
+},
+{
+  text: "Qual serviço fornece cache DNS altamente disponível?",
+  options: ["CloudFront", "Route 53", "ELB", "API Gateway"],
+  correct: [1],
+  explanation: "Route 53 é um serviço DNS gerenciado.",
+  extra: "Usa routing policies como latency e failover."
+},
+{
+  text: "Qual recurso reduz latência de leitura no DynamoDB?",
+  options: ["Read Replica", "DAX", "ElastiCache", "Aurora"],
+  correct: [1],
+  explanation: "DAX é um cache em memória para DynamoDB.",
+  extra: "Usado para microssegundos de latência."
+},
+{
+  text: "Qual prática reduz custos em workloads com uso imprevisível?",
+  options: ["Reserved Instances", "Savings Plans", "On-Demand", "Spot Instances"],
+  correct: [3],
+  explanation: "Spot Instances oferecem grande economia.",
+  extra: "Devem ser usadas apenas quando há tolerância à interrupção."
+}
+
 ];
 
 let pending = [...questions];
