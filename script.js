@@ -333,6 +333,111 @@ let questions = [
   explanation: "Diversificar tipos reduz interrupções.",
   extra: "Spot é cobrado junto com resiliência."
 },
+{
+  text: "Uma aplicação precisa acessar um bucket S3 a partir de uma VPC sem usar a internet. Qual solução atende?",
+  options: ["Internet Gateway", "NAT Gateway", "VPC Endpoint", "Elastic IP"],
+  correct: [2],
+  explanation: "VPC Endpoints permitem acesso privado ao S3.",
+  extra: "Muito cobrado quando o requisito é segurança."
+},
+{
+  text: "Qual serviço permite armazenamento de objetos com 11 noves de durabilidade?",
+  options: ["EFS", "EBS", "S3", "FSx"],
+  correct: [2],
+  explanation: "S3 oferece 99.999999999% de durabilidade.",
+  extra: "Durabilidade é diferente de disponibilidade."
+},
+{
+  text: "Qual recurso permite rotação automática de credenciais?",
+  options: ["IAM User", "Secrets Manager", "Parameter Store", "KMS"],
+  correct: [1],
+  explanation: "Secrets Manager gerencia e rotaciona segredos.",
+  extra: "Cai bastante em segurança."
+},
+{
+  text: "Qual serviço AWS é mais indicado para ETL serverless?",
+  options: ["Glue", "EMR", "Athena", "Redshift"],
+  correct: [0],
+  explanation: "Glue é um serviço ETL totalmente gerenciado.",
+  extra: "Base de pipelines de dados."
+},
+{
+  text: "Qual opção reduz latência de acesso global a arquivos estáticos?",
+  options: ["S3 Standard", "EFS", "CloudFront", "ALB"],
+  correct: [2],
+  explanation: "CloudFront usa edge locations.",
+  extra: "Sempre que falar em latência global, pense em CloudFront."
+},
+{
+  text: "Qual serviço fornece gerenciamento centralizado de contas AWS?",
+  options: ["IAM", "Organizations", "Control Tower", "RAM"],
+  correct: [1],
+  explanation: "Organizations permite gerenciar múltiplas contas.",
+  extra: "Control Tower usa Organizations por baixo."
+},
+{
+  text: "Qual banco de dados suporta armazenamento chave-valor totalmente gerenciado?",
+  options: ["Aurora", "RDS", "DynamoDB", "Redshift"],
+  correct: [2],
+  explanation: "DynamoDB é NoSQL chave-valor.",
+  extra: "Muito usado em aplicações serverless."
+},
+{
+  text: "Qual serviço protege aplicações contra ataques DDoS na camada de rede?",
+  options: ["WAF", "Shield", "Inspector", "Macie"],
+  correct: [1],
+  explanation: "Shield protege contra DDoS.",
+  extra: "Shield Standard já vem habilitado."
+},
+{
+  text: "Qual opção permite comunicação assíncrona entre microserviços?",
+  options: ["ALB", "SNS", "EC2", "Direct Connect"],
+  correct: [1],
+  explanation: "SNS desacopla produtores e consumidores.",
+  extra: "Fan-out é um padrão comum."
+},
+{
+  text: "Qual recurso do S3 reduz custos automaticamente ao longo do tempo?",
+  options: ["Versioning", "Replication", "Lifecycle Policy", "Encryption"],
+  correct: [2],
+  explanation: "Lifecycle Policies movem objetos entre classes.",
+  extra: "Muito cobrado quando fala de custo."
+},
+{
+  text: "Qual serviço permite monitorar latência de aplicações distribuídas?",
+  options: ["CloudWatch", "X-Ray", "CloudTrail", "Config"],
+  correct: [1],
+  explanation: "X-Ray fornece tracing distribuído.",
+  extra: "Essencial para microsserviços."
+},
+{
+  text: "Qual tipo de instância EC2 é otimizada para computação intensiva?",
+  options: ["t3", "c6g", "r6g", "m6i"],
+  correct: [1],
+  explanation: "Família C é otimizada para compute.",
+  extra: "Sempre leia a letra da família."
+},
+{
+  text: "Qual serviço permite compartilhamento de recursos entre contas?",
+  options: ["Organizations", "RAM", "IAM", "Control Tower"],
+  correct: [1],
+  explanation: "Resource Access Manager compartilha recursos.",
+  extra: "Muito usado para subnets e Transit Gateway."
+},
+{
+  text: "Qual opção permite recuperação rápida após exclusão acidental no S3?",
+  options: ["Encryption", "Versioning", "Replication", "Lifecycle"],
+  correct: [1],
+  explanation: "Versioning mantém versões antigas.",
+  extra: "Evita perda de dados."
+},
+{
+  text: "Qual prática reduz blast radius em falhas de segurança?",
+  options: ["Single account", "Least privilege", "Admin access", "Shared credentials"],
+  correct: [1],
+  explanation: "Least privilege limita impacto.",
+  extra: "Princípio fundamental de segurança."
+}
 
 
 
