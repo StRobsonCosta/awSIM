@@ -437,8 +437,112 @@ let questions = [
   correct: [1],
   explanation: "Least privilege limita impacto.",
   extra: "Princípio fundamental de segurança."
+},
+{
+  text: "Uma aplicação global usa ALB em duas regiões diferentes. É necessário direcionar usuários automaticamente para a região mais próxima, com failover automático em caso de indisponibilidade regional. Qual solução atende melhor?",
+  options: ["Weighted routing", "Latency routing com health checks", "Geolocation routing", "Round Robin DNS"],
+  correct: [1],
+  explanation: "Latency routing direciona usuários para a região com menor latência e, com health checks, permite failover.",
+  extra: "É a abordagem clássica da AWS para HA multi-region."
+},
+{
+  text: "Uma aplicação EC2 precisa acessar segredos de banco de dados com rotação automática e auditoria. Qual solução é mais adequada?",
+  options: ["IAM User com Access Key", "Parameter Store Standard", "Secrets Manager", "KMS direto"],
+  correct: [2],
+  explanation: "Secrets Manager fornece rotação automática e auditoria.",
+  extra: "Parameter Store não faz rotação automática nativa."
+},
+{
+  text: "Uma aplicação usa Spot Instances e não pode perder jobs em execução quando ocorre interrupção. Qual abordagem reduz impacto?",
+  options: ["Usar apenas On-Demand", "Usar Reserved Instances", "Checkpoint + Auto Scaling com múltiplos tipos", "Aumentar tamanho das instâncias"],
+  correct: [2],
+  explanation: "Checkpointing combinado com diversificação reduz impacto de interrupções.",
+  extra: "Spot exige arquitetura tolerante a falhas."
+},
+{
+  text: "Um banco RDS MySQL precisa suportar falha total de AZ sem perda de dados e sem intervenção manual. Qual configuração é necessária?",
+  options: ["Read Replica", "Snapshot diário", "Multi-AZ", "Backup manual"],
+  correct: [2],
+  explanation: "Multi-AZ fornece failover automático síncrono.",
+  extra: "Read Replicas são assíncronas."
+},
+{
+  text: "Uma aplicação serverless precisa processar eventos em ordem exata e sem duplicação. Qual combinação atende?",
+  options: ["SNS + Lambda", "SQS Standard + Lambda", "SQS FIFO + Lambda", "EventBridge + Lambda"],
+  correct: [2],
+  explanation: "SQS FIFO garante ordem e processamento único.",
+  extra: "Muito cobrado quando aparece 'exactly-once' e 'order'."
+},
+{
+  text: "Uma empresa precisa migrar 300 TB de dados com link de internet limitado e prazo curto. Qual solução é mais adequada?",
+  options: ["DataSync", "S3 Transfer Acceleration", "Snowball Edge", "AWS Backup"],
+  correct: [2],
+  explanation: "Snowball Edge é ideal para grandes volumes offline.",
+  extra: "DataSync depende de banda de rede."
+},
+{
+  text: "Uma aplicação crítica precisa de latência extremamente baixa para leituras frequentes em DynamoDB. Qual solução atende?",
+  options: ["Read Replica", "DAX", "Global Tables", "Athena"],
+  correct: [1],
+  explanation: "DAX fornece cache em memória com microssegundos de latência.",
+  extra: "Global Tables são para replicação, não performance."
+},
+{
+  text: "Uma arquitetura precisa desacoplar microserviços e permitir fan-out para múltiplos consumidores. Qual padrão AWS é ideal?",
+  options: ["ALB", "SNS + SQS", "SQS FIFO apenas", "Step Functions"],
+  correct: [1],
+  explanation: "SNS + SQS permite fan-out desacoplado.",
+  extra: "Cenário clássico de mensageria."
+},
+{
+  text: "Uma aplicação precisa executar containers sem gerenciar servidores e escalar automaticamente. Qual solução reduz overhead operacional?",
+  options: ["EC2 Auto Scaling", "ECS on EC2", "ECS com Fargate", "EKS com nodes próprios"],
+  correct: [2],
+  explanation: "Fargate elimina gerenciamento de servidores.",
+  extra: "Sempre que o requisito for 'menos operação', pense em Fargate."
+},
+{
+  text: "Uma empresa precisa bloquear ataques SQL Injection e XSS em uma aplicação HTTP sem alterar código. Qual serviço usar?",
+  options: ["Shield", "WAF", "GuardDuty", "Inspector"],
+  correct: [1],
+  explanation: "WAF protege contra ataques na camada 7.",
+  extra: "Shield é focado em DDoS."
+},
+{
+  text: "Uma aplicação precisa armazenar arquivos compartilhados acessados simultaneamente por centenas de instâncias EC2. Qual serviço atende?",
+  options: ["EBS", "S3", "EFS", "FSx for Windows"],
+  correct: [2],
+  explanation: "EFS permite acesso NFS simultâneo.",
+  extra: "EBS não pode ser compartilhado dessa forma."
+},
+{
+  text: "Uma empresa precisa rastrear quem alterou configurações de recursos AWS ao longo do tempo. Qual combinação atende melhor?",
+  options: ["CloudWatch + X-Ray", "CloudTrail apenas", "AWS Config + CloudTrail", "Inspector + GuardDuty"],
+  correct: [2],
+  explanation: "Config rastreia estado e CloudTrail registra ações.",
+  extra: "Pergunta clássica de auditoria."
+},
+{
+  text: "Uma aplicação multi-region precisa replicar dados DynamoDB automaticamente com baixa latência. Qual solução usar?",
+  options: ["DAX", "Streams", "Global Tables", "S3 Replication"],
+  correct: [2],
+  explanation: "Global Tables replicam DynamoDB entre regiões.",
+  extra: "Não confundir com DAX."
+},
+{
+  text: "Uma workload previsível e estável precisa reduzir custos a longo prazo. Qual opção é mais indicada?",
+  options: ["On-Demand", "Spot Instances", "Reserved Instances", "Auto Scaling apenas"],
+  correct: [2],
+  explanation: "Reserved Instances oferecem economia para uso previsível.",
+  extra: "Savings Plans também seriam corretos em outro cenário."
+},
+{
+  text: "Uma aplicação distribuída precisa identificar gargalos de latência entre microsserviços. Qual serviço AWS usar?",
+  options: ["CloudWatch Logs", "CloudTrail", "X-Ray", "Config"],
+  correct: [2],
+  explanation: "X-Ray fornece tracing distribuído.",
+  extra: "Muito cobrado em arquiteturas modernas."
 }
-
 
 
 ];
