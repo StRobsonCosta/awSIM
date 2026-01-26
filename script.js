@@ -608,7 +608,7 @@ document.getElementById("submit-btn").addEventListener("click", () => {
     pending.push(pending.shift());
   }
 
-  setTimeout(loadQuestion, 2000);
+  setTimeout(loadQuestion, 3500);
 });
 
 loadQuestion();
