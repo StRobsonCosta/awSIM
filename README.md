@@ -62,7 +62,7 @@ O núcleo do simulador segue o princípio:
 
 Esse modelo garante retenção e elimina falsos positivos de aprendizado.
 
----
+----
 
 ## 🏗️ Estrutura do Projeto
 
