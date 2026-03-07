@@ -117,7 +117,7 @@ As questões seguem um formato simples e extensível:
 
 > Não é necessário backend, build ou dependências.
 
----
+----
 
 ## 📚 Conteúdos Cobertos
 
