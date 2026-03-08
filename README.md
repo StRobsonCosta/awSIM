@@ -140,7 +140,7 @@ As questões seguem um formato simples e extensível:
 - 📱 Melhorias visuais
 - 🔀 Questões de múltipla resposta
 
----
+----
 
 ## ⚠️ Aviso Legal
 
