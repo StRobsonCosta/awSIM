@@ -156,6 +156,6 @@ Projeto desenvolvido para estudo profundo e preparação real para certificaçõ
 
 Se este simulador te ajudou, ⭐ considere deixar uma estrela no repositório.
 
----
+----
 
 Boa prova e bons estudos ☁️🚀
