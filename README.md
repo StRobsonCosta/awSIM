@@ -148,7 +148,7 @@ Este projeto **não é afiliado à Amazon Web Services (AWS)**.
 
 As questões são **autorais**, inspiradas no estilo da prova, criadas exclusivamente para fins educacionais.
 
----
+----
 
 ## 👨‍💻 Autor
 
