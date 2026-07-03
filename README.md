@@ -94,7 +94,7 @@ As questões seguem um formato simples e extensível:
 - Suporte a expansão para **choose 2 / choose 3**
 - Fácil adição de novos blocos de questões
 
-----
+-----
 
 ## ▶️ Como Executar
 
