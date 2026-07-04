@@ -26,7 +26,7 @@ O simulado **só termina quando todas as questões forem acertadas**.
 - Eliminar o hábito de decorar respostas
 - Criar um simulador **simples, offline e extensível**
 
-----
+-----
 
 ## 🧩 Funcionalidades
 
