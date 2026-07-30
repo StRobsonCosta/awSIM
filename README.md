@@ -40,7 +40,7 @@ O simulado **só termina quando todas as questões forem acertadas**.
   - O usuário precisa acertar **100%** para concluir
 - 🧠 Aprendizado progressivo e cumulativo
 
-----
+-----
 
 ## 🧠 Algoritmo de Reaprendizagem (Repetition Loop)
 
