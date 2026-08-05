@@ -4,7 +4,7 @@ Simulador interativo de prova **AWS Certified Solutions Architect – Associate*
 
 > Ideal para quem quer praticar no mesmo nível de dificuldade da certificação oficial da AWS.
 
-----
+-----
 
 ## 🚀 Visão Geral
 
