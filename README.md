@@ -17,7 +17,7 @@ Este projeto simula uma prova digital da AWS, permitindo que o candidato:
 
 O simulado **só termina quando todas as questões forem acertadas**.
 
-----
+---
 
 ## 🎯 Objetivos do Projeto
 
